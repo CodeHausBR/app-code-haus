@@ -16,15 +16,23 @@ export default defineConfig({
             index: "./src/app/main.tsx",
         },
     },
-
     html: {
         template: "./src/app/index.html",
+        title: "Code Haus",
+        tags: [
+            {
+                tag: "link",
+                attrs: {
+                    rel: "icon",
+                    href: "./src/app/public/icones/icon.ico",
+                    type: "image/x-icon",
+                },
+            },
+        ],
     },
-
     output: {
         distPath: { root: "dist" },
     },
-
     server: {
         port: 3000,
         open: true,
