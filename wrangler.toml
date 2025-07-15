@@ -14,3 +14,14 @@ not_found_handling = "single-page-application"
 # Variables para debug
 [vars]
 ENVIRONMENT = "production"
+
+# Configuração de ambientes
+[env.producao]
+workers_dev = false
+zone_id = "894b8d9acac17f7ddc6d10a08b9388f8"
+domain_name = "codehaus.app"
+
+[env.sandbox]
+workers_dev = false
+zone_id = "894b8d9acac17f7ddc6d10a08b9388f8"
+domain_name = "sandbox.codehaus.app"
