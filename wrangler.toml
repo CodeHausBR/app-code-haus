@@ -1,5 +1,5 @@
 # wrangler.toml
-name = "projeto-simples"
+name = "code-haus-app"
 main = "worker-dist/server.js"
 compatibility_date = "2025-03-25"
 compatibility_flags = ["nodejs_compat"]

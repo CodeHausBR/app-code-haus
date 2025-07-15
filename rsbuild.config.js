@@ -1,10 +1,16 @@
 // rsbuild.config.js
 import { defineConfig } from "@rsbuild/core";
 import { pluginReact } from "@rsbuild/plugin-react";
+import tailwindcssPlugin from "@tailwindcss/postcss";
+import autoprefixer from "autoprefixer";
 
 export default defineConfig({
     plugins: [pluginReact()],
-
+    tools: {
+        postcss: (config) => {
+            config.postcssOptions.plugins = [tailwindcssPlugin(), autoprefixer()];
+        },
+    },
     source: {
         entry: {
             index: "./src/app/main.tsx",
