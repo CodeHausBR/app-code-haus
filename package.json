@@ -1,0 +1,52 @@
+{
+    "name": "code-haus-app",
+    "version": "1.0.0",
+    "description": "Projeto simples com RSBuild, RSLib e Hono",
+    "type": "module",
+    "main": "./lib-dist/lib/index.js",
+    "module": "./lib-dist/es/index.js",
+    "types": "./lib-dist/types/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./lib-dist/types/index.d.ts",
+            "import": "./lib-dist/es/index.js",
+            "require": "./lib-dist/lib/index.js"
+        }
+    },
+    "files": [
+        "lib-dist"
+    ],
+    "scripts": {
+        "dev": "npm run build:worker && concurrently \"npm run dev:frontend\" \"npm run dev:worker\"",
+        "dev:frontend": "rsbuild dev",
+        "dev:worker": "wrangler dev",
+        "dev:worker:watch": "npm run build:worker && concurrently \"tsc -p tsconfig.worker.json --watch\" \"wrangler dev\"",
+        "build": "npm run build:lib && npm run build:frontend && npm run build:worker",
+        "dev:lib": "rslib build --watch",
+        "build:frontend": "rsbuild build",
+        "build:lib": "rslib build",
+        "build:worker": "tsc -p tsconfig.worker.json",
+        "deploy": "npm run build && wrangler deploy",
+        "type-check": "tsc --noEmit && tsc -p tsconfig.worker.json --noEmit",
+        "u": "npx npm-check-updates -u"
+    },
+    "devDependencies": {
+        "@rsbuild/core": "^1.4.6",
+        "@rsbuild/plugin-react": "^1.3.4",
+        "@rslib/core": "^0.10.5",
+        "@types/react": "^19.1.8",
+        "@types/react-dom": "^19.1.6",
+        "autoprefixer": "^10.4.0",
+        "concurrently": "^9.0.0",
+        "lucide-react": "^0.525.0",
+        "react": "^19.1.0",
+        "react-dom": "^19.1.0",
+        "tailwindcss": "4.1.11",
+        "typescript": "^5.7.0",
+        "wrangler": "^4.0.0"
+    },
+    "dependencies": {
+        "hono": "^4.6.0",
+        "zod": "^4.0.5"
+    }
+}

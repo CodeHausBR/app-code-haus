@@ -1,0 +1,16 @@
+# wrangler.toml
+name = "projeto-simples"
+main = "worker-dist/server.js"
+compatibility_date = "2025-03-25"
+compatibility_flags = ["nodejs_compat"]
+
+# Assets configuration
+[assets]
+directory = "dist"
+binding = "ASSETS"
+html_handling = "auto-trailing-slash"
+not_found_handling = "single-page-application"
+
+# Variables para debug
+[vars]
+ENVIRONMENT = "production"

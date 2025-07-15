@@ -1,0 +1,19 @@
+// tsconfig.worker.json
+{
+    "compilerOptions": {
+        "target": "ES2022",
+        "lib": ["ES2022"],
+        "module": "ESNext",
+        "moduleResolution": "bundler",
+        "strict": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "noEmit": false,
+        "outDir": "worker-dist"
+        // "types": ["@cloudflare/workers-types"]
+    },
+    "include": ["src/server/**/*"],
+    "exclude": ["node_modules"]
+}
