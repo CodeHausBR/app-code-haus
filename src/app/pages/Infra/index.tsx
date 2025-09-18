@@ -41,6 +41,9 @@ export default function SuporteTI() {
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-blue-900 via-slate-900 to-blue-800 text-white">
+            <head>
+                <title>#CodeHaus - Suporte T.I</title>
+            </head>
             {/* Header */}
             <header className="fixed w-full top-0 bg-blue-900/95 backdrop-blur-md z-50 border-b border-blue-500/20">
                 <div className="container mx-auto px-4 py-4">
