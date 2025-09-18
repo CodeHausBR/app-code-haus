@@ -14,6 +14,7 @@
 🗃️ raw: Adiciona dados RAW  
 🧹 cleanup: Limpa validação  
 🗑️ remove: Remove arquivos inúteis
+AppCOdehaus
 
 # COMMITS NO GIT HUB
 
