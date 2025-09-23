@@ -58,7 +58,7 @@ export default function SuporteTI() {
                             <span className="text-2xl font-bold text-blue-400">Suporte T.I.</span>
                         </div>
 
-                        <nav className="hidden md:flex space-x-8">
+                        <nav className="hidden md:flex space-x-8 font-bold">
                             <button onClick={() => scrollToSection("hero")} className="text-gray-300 hover:text-blue-400 transition-colors cursor-pointer">
                                 Início
                             </button>
@@ -149,7 +149,7 @@ export default function SuporteTI() {
                         <div className="relative">
                             <div className="absolute inset-0 bg-gradient-to-r from-blue-600/30 to-cyan-600/30 rounded-3xl blur-3xl"></div>
                             <div className="relative bg-slate-800/50 backdrop-blur-sm border border-blue-500/20 rounded-3xl p-8">
-                                <div className="grid grid-cols-2 gap-6">
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <div className="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 rounded-xl p-6 text-center">
                                         <Globe className="h-10 w-10 text-blue-400 mx-auto mb-3" />
                                         <h3 className="text-white font-semibold">Remoto</h3>
@@ -418,7 +418,7 @@ export default function SuporteTI() {
                                         rel="noopener noreferrer"
                                         className="whatsapp-icon-link flex items-center space-x-4"
                                     >
-                                        <div className="bg-green-600/20 p-3 rounded-lg">
+                                        <div className="bg-green-600/20 p-3 rounded-lg transition-all duration-300 bg-gradient-to-r text-white hover:from-green-800 hover:to-green-750 shadow-lg shadow-green-500/20 hover:shadow-green-500/40">
                                             <MessageCircleMore className="h-6 w-6 text-green-400" />
                                         </div>
                                     </a>
@@ -531,7 +531,7 @@ export default function SuporteTI() {
                         <div className="flex items-center space-x-2 mb-4 md:mb-0">
                             <Network className="h-6 w-6 text-blue-400" />
                             <span className="text-xl font-bold text-white">Code Haus</span>
-                            <span className="text-sm text-blue-400 ml-2">Suporte T.I.</span>
+                            <span className="text-xl font-bold text-blue-400">Suporte T.I.</span>
                         </div>
 
                         <div className="text-gray-400 text-sm">© 2025 Code Haus. Todos os direitos reservados.</div>
