@@ -142,7 +142,7 @@ export default function CodeHausLanding() {
                         <div className="relative">
                             <div className="absolute inset-0 bg-gradient-to-r from-orange-600/30 to-amber-600/30 rounded-3xl blur-3xl"></div>
                             <div className="relative bg-slate-800/50 backdrop-blur-sm border border-orange-500/20 rounded-3xl p-8">
-                                <div className="grid grid-cols-2 gap-6">
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <div className="bg-gradient-to-br from-orange-600/20 to-amber-600/20 rounded-xl p-6 text-center">
                                         <Rocket className="h-10 w-10 text-orange-400 mx-auto mb-3" />
                                         <h3 className="text-white font-semibold">Agilidade</h3>
