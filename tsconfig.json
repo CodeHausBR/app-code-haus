@@ -16,6 +16,7 @@
         "noEmit": true,
         "jsx": "react-jsx"
     },
+    "include": ["src/components", "src/type.d.ts"],
     "include": ["src/app/**/*", "src/lib/**/*"],
     "exclude": ["node_modules", "dist", "lib-dist", "worker-dist"]
 }

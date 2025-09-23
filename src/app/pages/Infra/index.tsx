@@ -1,8 +1,8 @@
 import "../../styles/App.css";
 import { useState } from "react";
-import { 
-    Eye, Code, Shield, Users, CheckCircle, ArrowRight, Phone, MapPin, Instagram, 
-    Star, Clock, TrendingUp, Menu, X, Monitor, Wifi, HardDrive, 
+import {
+    MessageCircleMore, Eye, Code, Shield, Users, CheckCircle, ArrowRight, Phone, MapPin, Instagram,
+    Star, Clock, TrendingUp, Menu, X, Monitor, Wifi, HardDrive,
     Settings, Headphones, Zap, Server, Network, Wrench, AlertTriangle,
     Globe, Home, Building, FileText, Award
 } from "lucide-react";
@@ -19,7 +19,6 @@ export default function SuporteTI() {
     });
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
         setFormData({
             ...formData,
@@ -39,6 +38,11 @@ export default function SuporteTI() {
         setMobileMenuOpen(false);
     };
 
+    // Detalhes para o botão do WhatsApp
+    const whatsAppNumber = "5547997831974"; // Seu número com código do país
+    const defaultMessage = "Olá! Gostaria de mais informações sobre o suporte de TI.";
+    const whatsappUrl = `https://wa.me/${whatsAppNumber}?text=${encodeURIComponent(defaultMessage)}`;
+
     return (
         <div className="min-h-screen bg-gradient-to-br from-blue-900 via-slate-900 to-blue-800 text-white">
             <head>
@@ -52,17 +56,18 @@ export default function SuporteTI() {
                             <Network className="h-8 w-8 text-blue-400" />
                             <span className="text-2xl font-bold text-white">Code Haus</span>
                             <span className="text-sm text-blue-400 ml-2">Suporte T.I.</span>
+                            <img src="icones/WALLPAPER_no_bg.ico" alt="logo" className="h-10 w-10" />
                         </div>
 
                         <nav className="hidden md:flex space-x-8">
-                            <button onClick={() => scrollToSection("hero")} className="text-gray-300 hover:text-blue-400 transition-colors">
+                            <button onClick={() => scrollToSection("hero")} className="text-gray-300 hover:text-blue-400 transition-colors cursor-pointer">
                                 Início
                             </button>
-                            
-                            <button onClick={() => scrollToSection("planos")} className="text-gray-300 hover:text-blue-400 transition-colors">
+
+                            <button onClick={() => scrollToSection("planos")} className="text-gray-300 hover:text-blue-400 transition-colors cursor-pointer">
                                 Planos
                             </button>
-                            <button onClick={() => scrollToSection("contato")} className="text-gray-300 hover:text-blue-400 transition-colors">
+                            <button onClick={() => scrollToSection("contato")} className="text-gray-300 hover:text-blue-400 transition-colors cursor-pointer">
                                 Contato
                             </button>
                         </nav>
@@ -104,7 +109,7 @@ export default function SuporteTI() {
                                     Especializado
                                 </h1>
                                 <p className="text-xl text-gray-300 leading-relaxed">
-                                    Mantenha sua infraestrutura de T.I. funcionando perfeitamente com nosso suporte remoto e presencial. 
+                                    Mantenha sua infraestrutura de T.I. funcionando perfeitamente com nosso suporte remoto e presencial.
                                     Expertise em redes, servidores e infraestrutura tecnológica.
                                 </p>
                             </div>
@@ -127,15 +132,15 @@ export default function SuporteTI() {
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <button
                                     onClick={() => scrollToSection("contato")}
-                                    className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-500 hover:to-cyan-500 transition-all duration-300 flex items-center justify-center group shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40"
+                                    className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-500 hover:to-cyan-500 transition-all duration-300 flex items-center justify-center group shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 cursor-pointer"
                                 >
                                     <AlertTriangle className="mr-2 h-5 w-5" />
                                     Emergência T.I.
-                                    <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                                    <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform cursor-pointer" />
                                 </button>
                                 <button
                                     onClick={() => scrollToSection("planos")}
-                                    className="border-2 border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300"
+                                    className="border-2 border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 cursor-pointer"
                                 >
                                     Ver Planos
                                 </button>
@@ -214,7 +219,7 @@ export default function SuporteTI() {
                                     <CheckCircle className="h-4 w-4 text-blue-400 mt-0.5 flex-shrink-0" />
                                     <span className="text-gray-300 text-sm">Verificação de vírus e Malware</span>
                                 </div>
-                                 <div className="flex items-start space-x-3">
+                                <div className="flex items-start space-x-3">
                                     <CheckCircle className="h-4 w-4 text-blue-400 mt-0.5 flex-shrink-0" />
                                     <span className="text-gray-300 text-sm">Manuteção preventiva simples de sistema operacional</span>
                                 </div>
@@ -230,7 +235,7 @@ export default function SuporteTI() {
 
                             <button
                                 onClick={() => scrollToSection("contato")}
-                                className="w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white"
+                                className="w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white cursor-pointer"
                             >
                                 Contratar Agora
                             </button>
@@ -270,7 +275,7 @@ export default function SuporteTI() {
                                     <CheckCircle className="h-4 w-4 text-blue-400 mt-0.5 flex-shrink-0" />
                                     <span className="text-gray-300 text-sm">Verificação de vírus e Malware</span>
                                 </div>
-                                 <div className="flex items-start space-x-3">
+                                <div className="flex items-start space-x-3">
                                     <CheckCircle className="h-4 w-4 text-blue-400 mt-0.5 flex-shrink-0" />
                                     <span className="text-gray-300 text-sm">Manuteção preventiva simples de sistema operacional</span>
                                 </div>
@@ -302,7 +307,7 @@ export default function SuporteTI() {
 
                             <button
                                 onClick={() => scrollToSection("contato")}
-                                className="w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:from-blue-500 hover:to-cyan-500 shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40"
+                                className="w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:from-blue-500 hover:to-cyan-500 shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 cursor-pointer"
                             >
                                 Contratar Agora
                             </button>
@@ -336,7 +341,7 @@ export default function SuporteTI() {
                                     <CheckCircle className="h-4 w-4 text-blue-400 mt-0.5 flex-shrink-0" />
                                     <span className="text-gray-300 text-sm">Verificação de vírus e Malware</span>
                                 </div>
-                                 <div className="flex items-start space-x-3">
+                                <div className="flex items-start space-x-3">
                                     <CheckCircle className="h-4 w-4 text-blue-400 mt-0.5 flex-shrink-0" />
                                     <span className="text-gray-300 text-sm">Manuteção preventiva simples de sistema operacional</span>
                                 </div>
@@ -364,7 +369,7 @@ export default function SuporteTI() {
                                     <CheckCircle className="h-4 w-4 text-blue-400 mt-0.5 flex-shrink-0" />
                                     <span className="text-gray-300 text-sm">Gestão de usuários e permissões</span>
                                 </div>
-                                 <div className="flex items-start space-x-3">
+                                <div className="flex items-start space-x-3">
                                     <CheckCircle className="h-4 w-4 text-blue-400 mt-0.5 flex-shrink-0" />
                                     <span className="text-gray-300 text-sm">Gerenciamento Avançado de Segurança</span>
                                 </div>
@@ -380,7 +385,7 @@ export default function SuporteTI() {
 
                             <button
                                 onClick={() => scrollToSection("contato")}
-                                className="w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white"
+                                className="w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white cursor-pointer"
                             >
                                 Contratar Agora
                             </button>
@@ -401,21 +406,27 @@ export default function SuporteTI() {
                         </p>
                     </div>
 
-                    <div className="grid lg:grid-cols-2 gap-12">
-                        <div className="space-y-8">
+                    <div className="flex justify-center ">
+                        <div className="space-y-8 max-w-2xl w-full">
                             <div className="bg-slate-800/50 backdrop-blur-sm border border-blue-500/20 rounded-xl p-8">
                                 <h3 className="text-2xl font-bold text-white mb-6">Canais de Atendimento</h3>
 
                                 <div className="space-y-6">
-                                    <div className="flex items-center space-x-4">
-                                        <div className="bg-red-600/20 p-3 rounded-lg">
-                                            <AlertTriangle className="h-6 w-6 text-red-400" />
+                                    
+                                    <a
+                                        href={whatsappUrl}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="whatsapp-icon-link flex items-center space-x-4"
+                                    >
+                                        <div className="bg-green-600/20 p-3 rounded-lg">
+                                            <MessageCircleMore className="h-6 w-6 text-green-400" />
                                         </div>
                                         <div>
-                                            <div className="text-white font-semibold">Emergência</div>
+                                            <div className="text-white font-semibold">WhatsApp</div>
                                             <div className="text-gray-300">(47) 99783-1974</div>
                                         </div>
-                                    </div>
+                                    </a>
 
                                     <div className="flex items-center space-x-4">
                                         <div className="bg-blue-600/20 p-3 rounded-lg">
@@ -440,8 +451,12 @@ export default function SuporteTI() {
                             </div>
                         </div>
 
-                        <div className="bg-slate-800/50 backdrop-blur-sm border border-blue-500/20 rounded-xl p-8">
+                         {/* <div className="bg-slate-800/50 backdrop-blur-sm border border-blue-500/20 rounded-xl p-8">
                             <h3 className="text-2xl font-bold text-white mb-6">Solicitar Suporte</h3>
+
+                          
+                            
+                            Formulário suporte
 
                             <form onSubmit={handleSubmit} className="space-y-6">
                                 <div className="grid md:grid-cols-2 gap-6">
@@ -487,7 +502,7 @@ export default function SuporteTI() {
 
                                 <button
                                     type="submit"
-                                    className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-4 px-6 rounded-lg font-semibold hover:from-blue-500 hover:to-cyan-500 transition-all duration-300 flex items-center justify-center group shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40"
+                                    className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-4 px-6 rounded-lg font-semibold hover:from-blue-500 hover:to-cyan-500 transition-all duration-300 flex items-center justify-center group shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 cursor-pointer"
                                 >
                                     {isSubmitted ? (
                                         <span className="flex items-center">
@@ -497,12 +512,12 @@ export default function SuporteTI() {
                                     ) : (
                                         <span className="flex items-center">
                                             Solicitar Suporte
-                                            <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                                            <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform cursor-pointer" />
                                         </span>
                                     )}
                                 </button>
                             </form>
-                        </div>
+                        </div>*/}
                     </div>
                 </div>
             </section>
