@@ -50,7 +50,7 @@ export default function CodeHausLanding() {
                         </div>
 
                         {/* Desktop Navigation */}
-                        <nav className="hidden md:flex space-x-8">
+                        <nav className="hidden md:flex space-x-8 font-bold">
                             <button onClick={() => scrollToSection("hero")} className="text-gray-300 hover:text-orange-400 cursor-pointer transition-colors">
                                 Início
                             </button>
@@ -73,7 +73,7 @@ export default function CodeHausLanding() {
 
                     {/* Mobile Navigation */}
                     {mobileMenuOpen && (
-                        <nav className="md:hidden mt-4 py-4 border-t border-orange-500/20">
+                        <nav className="md:hidden mt-4 py-4 border-t border-orange-500/20 font-bold">
                             <div className="flex flex-col space-y-4">
                                 <button onClick={() => scrollToSection("hero")} className="text-gray-300 hover:text-orange-400 transition-colors text-left">
                                     Início
@@ -337,8 +337,8 @@ export default function CodeHausLanding() {
                         </p>
                     </div>
 
-                    <div className="grid lg:grid-cols-2 gap-12">
-                        <div className="space-y-8">
+                    <div className="flex justify-center ">
+                        <div className="space-y-8 max-w-2xl w-full">
                             <div className="bg-slate-800/50 backdrop-blur-sm border border-orange-500/20 rounded-xl p-8">
                                 <h3 className="text-2xl font-bold text-white mb-6">Informações de Contato</h3>
 

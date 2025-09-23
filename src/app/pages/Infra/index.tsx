@@ -77,7 +77,7 @@ export default function SuporteTI() {
                     </div>
 
                     {mobileMenuOpen && (
-                        <nav className="md:hidden mt-4 py-4 border-t border-blue-500/20">
+                        <nav className="md:hidden mt-4 py-4 border-t border-blue-500/20 font-bold">
                             <div className="flex flex-col space-y-4">
                                 <button onClick={() => scrollToSection("hero")} className="text-gray-300 hover:text-blue-400 transition-colors text-left">
                                     Início
