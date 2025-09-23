@@ -53,10 +53,9 @@ export default function SuporteTI() {
                 <div className="container mx-auto px-4 py-4">
                     <div className="flex items-center justify-between">
                         <div className="flex items-center space-x-2">
-                            <Network className="h-8 w-8 text-blue-400" />
-                            <span className="text-2xl font-bold text-white">Code Haus</span>
-                            <span className="text-sm text-blue-400 ml-2">Suporte T.I.</span>
-                            <img src="icones/WALLPAPER_no_bg.ico" alt="logo" className="h-10 w-10" />
+                            <Network className="h-8 w-8 text-blue-400"/>
+                            <span className="text-2xl font-bold text-white">CodeHaus</span>
+                            <span className="text-2xl font-bold text-blue-400">Suporte T.I.</span>
                         </div>
 
                         <nav className="hidden md:flex space-x-8">
@@ -412,8 +411,8 @@ export default function SuporteTI() {
                                 <h3 className="text-2xl font-bold text-white mb-6">Canais de Atendimento</h3>
 
                                 <div className="space-y-6">
-                                    
-                                    <a
+                                    <div className="flex items-center space-x-4">
+                                        <a
                                         href={whatsappUrl}
                                         target="_blank"
                                         rel="noopener noreferrer"
@@ -422,11 +421,14 @@ export default function SuporteTI() {
                                         <div className="bg-green-600/20 p-3 rounded-lg">
                                             <MessageCircleMore className="h-6 w-6 text-green-400" />
                                         </div>
-                                        <div>
+                                    </a>
+
+                                    <div>
                                             <div className="text-white font-semibold">WhatsApp</div>
                                             <div className="text-gray-300">(47) 99783-1974</div>
                                         </div>
-                                    </a>
+                                    </div>
+                                    
 
                                     <div className="flex items-center space-x-4">
                                         <div className="bg-blue-600/20 p-3 rounded-lg">
