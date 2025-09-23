@@ -1,7 +1,7 @@
 
 import "../../styles/App.css";
 import { useState } from "react";
-import { Code, Rocket, Shield, Users, CheckCircle, ArrowRight, Phone, MapPin, Instagram, Star, Zap, Target, Award, Clock, TrendingUp, Menu, X } from "lucide-react";
+import { MessageCircleMore, Code, Rocket, Shield, Users, CheckCircle, ArrowRight, Phone, MapPin, Instagram, Star, Zap, Target, Award, Clock, TrendingUp, Menu, X } from "lucide-react";
 
 export default function CodeHausLanding() {
     const [formData, setFormData] = useState({
@@ -33,6 +33,10 @@ export default function CodeHausLanding() {
         document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
         setMobileMenuOpen(false);
     };
+
+    const whatsAppNumber = "5547997831974"; // Seu número com código do país
+    const defaultMessage = "Olá! Gostaria de mais informações sobre o suporte de TI.";
+    const whatsappUrl = `https://wa.me/${whatsAppNumber}?text=${encodeURIComponent(defaultMessage)}`;
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-gray-900 via-slate-900 to-gray-800 text-white">
@@ -340,6 +344,24 @@ export default function CodeHausLanding() {
 
                                 <div className="space-y-6">
                                     <div className="flex items-center space-x-4">
+                                        <a
+                                        href={whatsappUrl}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="whatsapp-icon-link flex items-center space-x-4"
+                                    >
+                                        <div className="bg-green-600/20 p-3 rounded-lg transition-all duration-300 bg-gradient-to-r text-white hover:from-green-800 hover:to-green-750 shadow-lg shadow-green-500/20 hover:shadow-green-500/40">
+                                            <MessageCircleMore className="h-6 w-6 text-green-400" />
+                                        </div>
+                                    </a>
+
+                                    <div>
+                                            <div className="text-white font-semibold">WhatsApp</div>
+                                            <div className="text-gray-300">(47) 99783-1974</div>
+                                        </div>
+                                    </div>
+
+                                    <div className="flex items-center space-x-4">
                                         <div className="bg-orange-600/20 p-3 rounded-lg">
                                             <Phone className="h-6 w-6 text-orange-400" />
                                         </div>
@@ -386,7 +408,7 @@ export default function CodeHausLanding() {
                             </div>
                         </div>
 
-                        <div className="bg-slate-800/50 backdrop-blur-sm border border-orange-500/20 rounded-xl p-8">
+                        {/*<div className="bg-slate-800/50 backdrop-blur-sm border border-orange-500/20 rounded-xl p-8">
                             <h3 className="text-2xl font-bold text-white mb-6">Solicite um Orçamento</h3>
 
                             <form onSubmit={handleSubmit} className="space-y-6">
@@ -475,7 +497,7 @@ export default function CodeHausLanding() {
                                     )}
                                 </button>
                             </form>
-                        </div>
+                        </div>*/}
                     </div>
                 </div>
             </section>
