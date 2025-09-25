@@ -1,5 +1,6 @@
 
 import "../../styles/App.css";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import { MessageCircleMore, Code, Rocket, Shield, Users, CheckCircle, ArrowRight, Phone, MapPin, Instagram, Star, Zap, Target, Award, Clock, TrendingUp, Menu, X } from "lucide-react";
 
@@ -63,6 +64,9 @@ export default function CodeHausLanding() {
                             <button onClick={() => scrollToSection("contato")} className="text-gray-300 hover:text-orange-400 cursor-pointer transition-colors">
                                 Contato
                             </button>
+                            <Link to="/infra" className="text-gray-300 hover:text-orange-400 transition-colors">
+                                CodeHaus Suporte
+                            </Link>
                         </nav>
 
                         {/* Mobile Menu Button */}
@@ -86,7 +90,10 @@ export default function CodeHausLanding() {
                                 </button>
                                 <button onClick={() => scrollToSection("contato")} className="text-gray-300 hover:text-orange-400 transition-colors text-left">
                                     Contato
-                                </button>
+                                </button>  
+                                <Link to="/infra" className="text-gray-300 hover:text-orange-400 transition-colors">
+                                    CodeHaus Suporte
+                                </Link>                              
                             </div>
                         </nav>
                     )}

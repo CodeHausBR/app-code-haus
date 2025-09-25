@@ -1,11 +1,7 @@
 import "../../styles/App.css";
+import { Link } from "react-router-dom";
 import { useState } from "react";
-import {
-    MessageCircleMore, Eye, Code, Shield, Users, CheckCircle, ArrowRight, Phone, MapPin, Instagram,
-    Star, Clock, TrendingUp, Menu, X, Monitor, Wifi, HardDrive,
-    Settings, Headphones, Zap, Server, Network, Wrench, AlertTriangle,
-    Globe, Home, Building, FileText, Award
-} from "lucide-react";
+import {MessageCircleMore, Eye, CheckCircle, ArrowRight, Phone, MapPin, Menu, X, Network, AlertTriangle, Globe, Home} from "lucide-react";
 
 export default function SuporteTI() {
     const [formData, setFormData] = useState({
@@ -69,6 +65,9 @@ export default function SuporteTI() {
                             <button onClick={() => scrollToSection("contato")} className="text-gray-300 hover:text-blue-400 transition-colors cursor-pointer">
                                 Contato
                             </button>
+                            <Link to="/" className="text-gray-300 hover:text-blue-400 transition-colors cursor-pointer">
+                               CodeHaus Softwares
+                            </Link>
                         </nav>
 
                         <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="md:hidden text-white">
@@ -88,6 +87,9 @@ export default function SuporteTI() {
                                 <button onClick={() => scrollToSection("contato")} className="text-gray-300 hover:text-blue-400 transition-colors text-left">
                                     Contato
                                 </button>
+                                <Link to="/" className="text-gray-300 hover:text-blue-400 transition-colors cursor-pointer">
+                                    CodeHaus Softwares
+                                </Link>
                             </div>
                         </nav>
                     )}
