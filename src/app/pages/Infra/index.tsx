@@ -2,6 +2,7 @@ import "../../styles/App.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import {MessageCircleMore, Eye, CheckCircle, ArrowRight, Phone, MapPin, Menu, X, Network, AlertTriangle, Globe, Home} from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function SuporteTI() {
     const [formData, setFormData] = useState({
@@ -40,9 +41,16 @@ export default function SuporteTI() {
     const whatsappUrl = `https://wa.me/${whatsAppNumber}?text=${encodeURIComponent(defaultMessage)}`;
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-blue-900 via-slate-900 to-blue-800 text-white">
+        <motion.div 
+        className="min-h-screen bg-gradient-to-br from-blue-900 via-slate-900 to-blue-800 text-white"
+        initial={{ opacity: 0}}
+        animate={{ opacity: 1}}
+        exit={{ opacity: 0}}
+        transition={{ duration: 0.6 }}
+        >
             <head>
                 <title>#CodeHaus - Suporte T.I</title>
+                    <link rel="shortcut icon" type="image/x-icon" href="../icones/icon.ico"></link>
             </head>
             {/* Header */}
             <header className="fixed w-full top-0 bg-blue-900/95 backdrop-blur-md z-50 border-b border-blue-500/20">
@@ -544,6 +552,6 @@ export default function SuporteTI() {
                     </div>
                 </div>
             </footer>
-        </div>
+        </motion.div>
     );
 }
