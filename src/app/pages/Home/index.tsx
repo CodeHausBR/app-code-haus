@@ -3,6 +3,7 @@ import "../../styles/App.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { MessageCircleMore, Code, Rocket, Shield, Users, CheckCircle, ArrowRight, Phone, MapPin, Instagram, Star, Zap, Target, Award, Clock, TrendingUp, Menu, X } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function CodeHausLanding() {
     const [formData, setFormData] = useState({
@@ -40,8 +41,15 @@ export default function CodeHausLanding() {
     const whatsappUrl = `https://wa.me/${whatsAppNumber}?text=${encodeURIComponent(defaultMessage)}`;
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-gray-900 via-slate-900 to-gray-800 text-white">
+        <motion.div 
+        className="min-h-screen bg-gradient-to-br from-gray-900 via-slate-900 to-gray-800 text-white"
+        initial={{ opacity: 0}}
+        animate={{ opacity: 1}}
+        exit={{ opacity: 0}}
+        transition={{ duration: 0.6 }}
+        >
             {/* Header */}
+            
             <header className="fixed w-full top-0 bg-gray-900/95 backdrop-blur-md z-50 border-b border-orange-500/20">
                 <div className="container mx-auto px-4 py-4">
                     <div className="flex items-center justify-between">
@@ -522,6 +530,6 @@ export default function CodeHausLanding() {
                     </div>
                 </div>
             </footer>
-        </div>
+        </motion.div>
     );
 }
