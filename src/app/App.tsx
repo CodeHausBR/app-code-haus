@@ -6,9 +6,9 @@ import ScrollToTop from "../lib/components/ScrollToTop";
 
 export default function App() {
   return (
-    <BrowserRouter>
-        <ScrollToTop />
-        <AnimatedRoutes/>
-    </BrowserRouter>
+  <BrowserRouter>
+    <ScrollToTop />
+    <AnimatedRoutes/>
+  </BrowserRouter>
   );
 }

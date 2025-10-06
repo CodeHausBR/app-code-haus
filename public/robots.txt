@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Sitemap: https://codehaus.app/sitemap.xml
+
+# If you need to disallow staging or private paths, add rules per environment.
