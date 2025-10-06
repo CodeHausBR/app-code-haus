@@ -49,7 +49,6 @@ DELETE:: deletar_pelo_id
 https://cloudflare.com/cdn-cgi/trace
 
 # Versionamento semântico (SemVer): Use o padrão X.Y.Z (Major.Minor.Patch)
-
 X (Major): Primeiro número - aumentado quando ocorrem mudanças incompatíveis com versões anteriores (breaking changes)
 Y (Minor): Número do meio - aumentado quando adicionados novos recursos compatíveis com versões anteriores
 Z (Patch): Último número - aumentado para correções de bugs e pequenos ajustes que não alteram a funcionalidade existente

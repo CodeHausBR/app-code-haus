@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { MessageCircleMore, Code, Rocket, Shield, Users, CheckCircle, ArrowRight, Phone, MapPin, Instagram, Star, Zap, Target, Award, Clock, TrendingUp, Menu, X } from "lucide-react";
 import { motion } from "framer-motion";
+import { usePageMeta } from "../../lib/seo";
 
 export default function CodeHausLanding() {
     const [formData, setFormData] = useState({
@@ -52,6 +53,12 @@ export default function CodeHausLanding() {
   };
     const defaultMessage = "Olá! Gostaria de mais informações sobre a consultoria de Software";
     const whatsappUrl = `https://wa.me/${whatsAppNumber}?text=${encodeURIComponent(defaultMessage)}`;
+
+    usePageMeta({
+        title: "Code Haus — Software sob medida & Suporte de TI | Navegantes, SC",
+        description: "Transformamos suas ideias em soluções digitais poderosas. Desenvolvimento personalizado e suporte técnico em Navegantes, SC.",
+        image: "https://codehaus.app/icones/WALLPAPER_no_bg.png",
+    });
 
     return (
         <motion.div 
@@ -546,3 +553,7 @@ export default function CodeHausLanding() {
         </motion.div>
     );
 }
+
+// Small effect to update head tags when this component mounts
+// We avoid an external dependency to keep compatibility with React 19 setup
+// usePageMeta is imported from ../../lib/seo

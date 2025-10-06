@@ -1,8 +1,9 @@
 import "../../styles/App.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import {MessageCircleMore, Eye, CheckCircle, ArrowRight, Phone, MapPin, Menu, X, Network, AlertTriangle, Globe, Home} from "lucide-react";
+import {MessageCircleMore, Eye, CheckCircle, ArrowRight, Phone, MapPin, Menu, X, Network, AlertTriangle, Globe, Home, Instagram} from "lucide-react";
 import { motion } from "framer-motion";
+import { usePageMeta } from "../../lib/seo";
 
 export default function SuporteTI() {
     const [formData, setFormData] = useState({
@@ -54,6 +55,12 @@ export default function SuporteTI() {
     const whatsappUrl = `https://wa.me/${whatsAppNumber}?text=${encodeURIComponent(defaultMessage)}`;
 
     return (
+        <>
+        {usePageMeta({
+            title: "Code Haus Suporte T.I. — Infraestrutura & Monitoramento",
+            description: "Suporte técnico, monitoramento e gestão de infraestrutura de TI. Planos para empresas de todos os tamanhos em Navegantes, SC.",
+            image: "https://codehaus.app/icones/WALLPAPER_no_bg.png",
+        })}
         <motion.div 
         className="min-h-screen bg-gradient-to-br from-blue-900 via-slate-900 to-blue-800 text-white"
         initial={{ opacity: 0}}
@@ -61,10 +68,7 @@ export default function SuporteTI() {
         exit={{ opacity: 0}}
         transition={{ duration: 0.6 }}
         >
-            <head>
-                <title>#CodeHaus - Suporte T.I</title>
-                    <link rel="shortcut icon" type="image/x-icon" href="../icones/icon.ico"></link>
-            </head>
+            {/* head handled by Helmet */}
             {/* Header */}
             <header className="fixed w-full top-0 bg-blue-900/95 backdrop-blur-md z-50 border-b border-blue-500/20">
                 <div className="container mx-auto px-4 py-4">
@@ -472,6 +476,23 @@ export default function SuporteTI() {
                                             <div className="text-gray-300">Navegantes, SC</div>
                                         </div>
                                     </div>
+
+                                    <div className="flex items-center space-x-4">
+                                        <div className="bg-blue-600/20 p-3 rounded-lg">
+                                            <Instagram className="h-6 w-6 text-blue-400" />
+                                        </div>
+                                        <div>
+                                            <div className="text-white font-semibold">Instagram</div>
+                                            <a
+                                                href="https://www.instagram.com/codehaus.ai"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="text-blue-400 hover:text-blue-300 transition-colors"
+                                            >
+                                                @codehaus.ai
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -566,5 +587,6 @@ export default function SuporteTI() {
                 </div>
             </footer>
         </motion.div>
+        </>
     );
 }
