@@ -36,7 +36,20 @@ export default function SuporteTI() {
     };
 
     // Detalhes para o botão do WhatsApp
-    const whatsAppNumber = "5547997831974"; // Seu número com código do país
+    const whatsAppNumber = "5547997072451"; // Seu número com código do país
+    const formatWhatsAppNumber = (number: string) => {
+    // Remove o "55" inicial se ele existir
+    const numberWithoutCountryCode = number.startsWith('55') ? number.substring(2) : number;
+
+    // Extrai o DDD (os dois primeiros dígitos)
+    const ddd = numberWithoutCountryCode.substring(0, 2);
+
+    // Extrai o restante do número
+    const mainNumber = numberWithoutCountryCode.substring(2);
+
+    // Retorna o número formatado no padrão (XX) XXXXXXXXX
+    return `(${ddd}) ${mainNumber}`;
+  };
     const defaultMessage = "Olá! Gostaria de mais informações sobre o suporte de TI.";
     const whatsappUrl = `https://wa.me/${whatsAppNumber}?text=${encodeURIComponent(defaultMessage)}`;
 
@@ -435,7 +448,7 @@ export default function SuporteTI() {
 
                                     <div>
                                             <div className="text-white font-semibold">WhatsApp</div>
-                                            <div className="text-gray-300">(47) 99783-1974</div>
+                                            <div className="text-gray-300">{formatWhatsAppNumber(whatsAppNumber)}</div>
                                         </div>
                                     </div>
                                     
@@ -446,7 +459,7 @@ export default function SuporteTI() {
                                         </div>
                                         <div>
                                             <div className="text-white font-semibold">Suporte Comercial</div>
-                                            <div className="text-gray-300">(47) 3261-0000</div>
+                                            <div className="text-gray-300">(47) 997831974</div>
                                         </div>
                                     </div>
 
