@@ -459,7 +459,7 @@ export default function SuporteTI() {
                                         </div>
                                         <div>
                                             <div className="text-white font-semibold">Suporte Comercial</div>
-                                            <div className="text-gray-300">(47) 32610000</div>
+                                            <div className="text-gray-300">(47) 997831974</div>
                                         </div>
                                     </div>
 
