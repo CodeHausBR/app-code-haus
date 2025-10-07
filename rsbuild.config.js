@@ -24,7 +24,7 @@ export default defineConfig({
                 tag: "link",
                 attrs: {
                     rel: "icon",
-                    href: "./src/app/public/icones/icon.ico",
+                    href: "/icones/favicon.ico",
                     type: "image/x-icon",
                 },
             },
