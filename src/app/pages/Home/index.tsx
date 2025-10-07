@@ -57,7 +57,7 @@ export default function CodeHausLanding() {
     usePageMeta({
         title: "Code Haus — Software sob medida & Suporte de TI | Navegantes, SC",
         description: "Transformamos suas ideias em soluções digitais poderosas. Desenvolvimento personalizado e suporte técnico em Navegantes, SC.",
-        image: "https://codehaus.app/icones/CodeHaus_Logo_32x32.jpg",
+        image: "https://codehaus.app/icones/web-app-manifest-192x192.png",
     });
 
     return (
