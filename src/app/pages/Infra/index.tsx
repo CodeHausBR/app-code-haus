@@ -59,7 +59,7 @@ export default function SuporteTI() {
         {usePageMeta({
             title: "Code Haus Suporte T.I. — Infraestrutura & Monitoramento",
             description: "Suporte técnico, monitoramento e gestão de infraestrutura de TI. Planos para empresas de todos os tamanhos em Navegantes, SC.",
-            image: "https://codehaus.app/icones/WALLPAPER_no_bg.png",
+            image: "https://codehaus.app/icones/CodeHaus_Logo_32x32.jpg",
         })}
         <motion.div 
         className="min-h-screen bg-gradient-to-br from-blue-900 via-slate-900 to-blue-800 text-white"
