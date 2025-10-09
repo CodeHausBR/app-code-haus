@@ -74,11 +74,10 @@ export default function SuporteTI() {
                 <div className="container mx-auto px-4 py-4">
                     <div className="flex items-center justify-between">
                         <div className="flex items-center space-x-2">
-                            <Network className="h-8 w-8 text-blue-400"/>
+                            <img src="/icones/Logo_Infra_nobg.png" alt="CodeHaus Logo" className="h-8 w-12"/>
                             <span className="text-2xl font-bold text-white">CodeHaus</span>
                             <span className="text-2xl font-bold text-blue-400">Suporte T.I.</span>
                         </div>
-
                         <nav className="hidden md:flex space-x-8 font-bold">
                             <button onClick={() => scrollToSection("hero")} className="text-gray-300 hover:text-blue-400 transition-colors cursor-pointer">
                                 Início
