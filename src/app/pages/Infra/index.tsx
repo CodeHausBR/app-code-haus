@@ -455,17 +455,6 @@ export default function SuporteTI() {
                                             <div className="text-gray-300">{formatWhatsAppNumber(whatsAppNumber)}</div>
                                         </div>
                                     </div>
-                                    
-
-                                    <div className="flex items-center space-x-4">
-                                        <div className="bg-blue-600/20 p-3 rounded-lg">
-                                            <Phone className="h-6 w-6 text-blue-400" />
-                                        </div>
-                                        <div>
-                                            <div className="text-white font-semibold">Suporte Comercial</div>
-                                            <div className="text-gray-300">(47) 997831974</div>
-                                        </div>
-                                    </div>
 
                                     <div className="flex items-center space-x-4">
                                         <div className="bg-blue-600/20 p-3 rounded-lg">
