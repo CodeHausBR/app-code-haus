@@ -74,7 +74,7 @@ export default function CodeHausLanding() {
                 <div className="container mx-auto px-4 py-4">
                     <div className="flex items-center justify-between">
                         <div className="flex items-center space-x-2">
-                            <Code className="h-8 w-8 text-orange-400" />
+                            <img src="/icones/Logo_nobg.png" alt="CodeHaus Logo" className="h-8 w-12"/>
                             <span className="text-2xl font-bold text-white">Code Haus</span>
                         </div>
 
