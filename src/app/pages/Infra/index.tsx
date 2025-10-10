@@ -70,7 +70,7 @@ export default function SuporteTI() {
         >
             {/* head handled by Helmet */}
             {/* Header */}
-            <header className="fixed w-full top-0 bg-blue-900/95 backdrop-blur-md z-50 border-b border-blue-500/20">
+            <header className="fixed w-full top-0 bg-slate-800/50 backdrop-blur-md z-50 border-b border-blue-500/20">
                 <div className="container mx-auto px-4 py-4">
                     <div className="flex items-center justify-between">
                         <div className="flex items-center space-x-2">
